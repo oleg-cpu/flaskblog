@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:11.14-alpine
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data/pgdata
+    env_file:
+      - ./.env.prod.db
+    restart: always
+
+  app:
+    build: .
+    container_name: flaskblog
+    env_file:
+      - ./.env.prod
+    expose:
+      - 5000
+    depends_on:
+      - postgres    
+    restart: always
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    container_name: nginx_proxy_server
+    depends_on:
+      - app
+    
+  
