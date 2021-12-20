@@ -6,19 +6,7 @@ Deploy application in aws with use terraform.
 Backup database use bash script and cron.
 
 ## Run projects
-1.Create .env.prod in root directory.
-Set environment variables in file .env.prod 
-+ FLASK_APP=
-+ DATABASE_URL=
-+ DATABASE=
-+ POSTGRES_HOST=
-+ POSTGRES_PORT=
-
-2.Create .env.prod.db in root directory
-+ POSTGRES_PASSWORD=
-+ POSTGRES_USER=
-+ POSTGRES_DB=
-+ PGDATA=
+1.Set values enviroment variables in files .env.prod, .env.prod.db
 
 3.Run command docker-compose up
 
