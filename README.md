@@ -8,7 +8,7 @@ Backup database use bash script and cron.
 ## Run projects
 1.Set values enviroment variables in files .env.prod, .env.prod.db
 
-3.Run command docker-compose up
+2.Run command docker-compose up
 
 #### Technologies
 1. Python / Flask
