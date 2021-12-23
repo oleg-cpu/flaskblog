@@ -79,6 +79,10 @@ celerybeat-schedule
 .env
 
 
+# terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+
 # virtualenv
 venv/
 ENV/
