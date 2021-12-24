@@ -3,12 +3,15 @@
 Simple flask blog run in three docker comtainers. Fisrt container app, second container PostgreSQL.
 Three container nginx proxy server.
 Deploy application in aws with use terraform.
-Backup database use bash script and cron.
+Backup database use bash script.
 
-## Run projects
-1.Set values enviroment variables in files .env.prod, .env.prod.db
+## Run projects with terrafrom
+1.Set enviroment varrible in terminal secret-key and access key
+2.Run command terraform init
+3.Run comand terraform apply
 
-2.Run command docker-compose up
+## Run project with docker-compose
+1.Run command docker-compose up
 
 #### Technologies
 1. Python / Flask
